@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <FrameLayout
+        android:id="@+id/fl_drawing_view_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:padding="1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ll_color_paint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ib_background"
+            android:scaleType="centerCrop"
+            android:contentDescription="background_image"
+            />
+
+        <com.sitapuramargram.kidsdrawingapp.DrawingView
+            android:id="@+id/drawing_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            />
+
+
+    </FrameLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll_color_paint"
+        app:layout_constraintBottom_toTopOf="@id/ll_action_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fl_drawing_view_container"
+        >
+        <ImageButton
+            android:id="@+id/ib_skin"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:contentDescription="color_pallet"
+            android:background="@color/skin"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/skin"/>
+
+        <ImageButton
+            android:id="@+id/ib_black"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:contentDescription="color_pallet"
+            android:background="@color/black"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/black"/>
+
+        <ImageButton
+            android:id="@+id/ib_red"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:contentDescription="color_pallet"
+            android:background="@color/red"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/red"/>
+
+        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/ib_green"
+            android:layout_margin="2dp"
+            android:contentDescription="color_pallet"
+            android:background="@color/green"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/green"/>
+
+        <ImageButton
+            android:id="@+id/ib_blue"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:contentDescription="color_pallet"
+            android:background="@color/blue"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/blue"/>
+
+        <ImageButton
+            android:id="@+id/ib_yellow"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:contentDescription="color_pallet"
+            android:background="@color/yellow"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/yellow"/>
+
+        <ImageButton
+            android:id="@+id/ib_lollipop"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:contentDescription="color_pallet"
+            android:background="@color/lollipop"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/lollipop"/>
+        <ImageButton
+            android:id="@+id/ib_random"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:contentDescription="color_pallet"
+            android:background="@color/random"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/random"/>
+        <ImageButton
+            android:id="@+id/ib_white"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="2dp"
+            android:contentDescription="color_pallet"
+            android:background="@color/white"
+            android:src="@drawable/pallet_normal"
+            android:tag="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/ll_action_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/ib_gallery"
+            android:contentDescription="gallery_image"
+            android:scaleType="fitXY"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_gallery"
+
+
+            />
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/ib_undo"
+            android:contentDescription="undo_image"
+            android:scaleType="fitXY"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_undo"
+
+            />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/ib_brush"
+            android:contentDescription="brush_image"
+            android:scaleType="fitXY"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_brush"
+
+            />
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/ib_save"
+            android:contentDescription="save_image"
+            android:scaleType="fitXY"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_save"
+
+            />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
